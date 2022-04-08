@@ -18,7 +18,6 @@ class CartCubit extends Cubit<CartState> {
   }
 
   addRandomProduct() {
-    print('Add randomm');
     final product = _generateRandomProduct();
     final newState = state.maybeMap(
         (value) => CartState(value.cart.put(product)),
